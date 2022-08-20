@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <%- include('partials/head') %> 
+  <body>
+    <%- include('partials/header') %> 
+
+        <main class="container min-vh-100">
+          <fieldset class="editor_product">
+            <legend class="agregar">EDITAR PRODUCTO: <%= producto.name %> </legend>
+            <form class="row " action="/admin/productos/<%= producto.id %>?_method=PUT" method="POST" id="formProduct" enctype="multipart/form-data">
+              <div class="mb-3 col-md-6">
+                <label for="name" class="nombre_product">Nombre del producto</label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Nombre de producto" value="<%= producto.name %>">
+                <span class="error-msg" id="nameError"></span>
+              </div>
+              <div class="mb-3 col-md-6">
+                <label for="brands" class="marca_product">Marca</label>
+                <input type="text" name="brands" class="form-control" id="brands" placeholder="Marca del producto" value="<%= producto.brands %>">
+                <span class="error-msg" id="marcaError"></span>
+              </div>
+              <div class="mb-3 col-md-6">
+                <label for="price" class="prices">Precio</label>
+                <input type="number" name="price" class="form-control" id="price" placeholder="Precio" value="<%= producto.price %>">
+                <span class="error-msg" id="priceError"></span>
+              </div>
+              <div class="mb-3 col-md-6">
+                <label for="discount" class="discount">Descuento</label>
+                <input type="number" name="discount" class="form-control" id="discount" placeholder="Descuento" value="<%= producto.discount %>">
+                <span class="error-msg" id="discountError"></span>
+              </div>
+              <div class="mb-3 col-md-6">
+                <label for="category" class="form-label">Categorias</label>
+                <select name="categoryId" class="form-select" id="category" aria-label="Default select example">
+                  <option selected hidden>...</option>
+                  <option value="1">Perros</option>
+                  <option value="2">Gatos</option>
+                  <option value="3">Accesorios</option>
+                </select>
+                <span class="error-msg" id="categoryNameError"></span>
+              </div>
+              <div class="mb-3 col-md-6">
+                <label for="image">Imagen</label>
+                <input type="file" name="image" class="form-control" placeholder="seleccione una imagen" id="image">
+                <span class="error-msg" id="imageError"></span>
+              </div>
+              <div class="form-check">
+                <input <%= producto.stock ? "checked" : "" %> class="form-check-input" name="stock" type="checkbox" role="switch" id="stock">
+                <label class="form-check-label" for="stock">Stock disponible</label>
+                <span id="stockErrors"></span>
+              </div>
+              <div class="mb-3 ">
+                <label for="description" class="form-label">Descripción</label>
+                <textarea name="description" class="form-control" id="description" rows="3"><%= producto.description %></textarea>
+                <span class="error-msg" id="descriptionError"></span>
+              </div>
+              <div class="buttom-editor">
+                <button class="btn btn-primary" type="submit">EDITAR</button>
+                <span id="submitErrors"></span>
+              </div>
+             </form>
+          </fieldset>
+      
+        </main>
+        <%- include('partials/footer') %> 
+      
+      <%- include('partials/script') %>
+      <script src="../../../js/addProductValidator.js"></script>
+
+    </body> 
+
+</html>

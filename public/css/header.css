@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #1fa9e7;
+  
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  margin: 0px;
+}
+
+.section-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.burger-menu i {
+  border-radius: 5px;
+  color: white;
+  padding: 11px 13px;
+  font-size: 30px;
+}
+
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  left: 0;
+  right: 0;
+}
+
+header img {
+  width: 225px;
+  margin: 10px;
+  margin-right: 10px;
+  padding: 0;
+  display: inline;
+  border-radius: 500px;
+}
+
+.conteiner-buscador {
+  position: relative;
+  width: 12rem;
+
+}
+
+header #search {
+  background-color: white;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 93%;
+  height: 40px;
+  font-size: 14px;
+  display: inline;
+  margin-right: 0px;
+  max-width: 500px;
+
+}
+
+header i #lupa {
+  background: none;
+  padding: 12px 5px;
+  border: none;
+  color: grey;
+  position: absolute;
+  right: 12%;
+}
+
+#nav {
+  padding: 15 px;
+}
+
+#nav .opciones {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.opciones a:hover {
+  color: white;
+  border-radius: 15px;
+  border: black;
+}
+
+.section-top .section-bottom .usuario .avatar_session img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.usuario {
+  display: none;
+}
+
+.usuario a:hover {
+  color: white;
+  border-radius: 15px;
+  border: black;
+}
+
+@media (min-width: 950px) {
+.burger-menu {
+  display: none;
+}
+  
+.conteiner-buscador {
+  position: relative;
+  width: 28rem;
+
+}
+  header #search {
+    background-color: white;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: none;
+    width: 93%;
+    height: 40px;
+    font-size: 20px;
+    display: inline;
+    margin-right: 0px;
+    max-width: 500px;
+  
+  }
+
+}

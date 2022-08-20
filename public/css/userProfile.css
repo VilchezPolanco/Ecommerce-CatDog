@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.userProfile .avatar {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 1rem;
+
+}
+
+.userProfile .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+main.userProfile {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 3rem ;
+}
+
+h3 {
+    color: #3BC4B0
+}
+
+.container-profile{
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border:solid 1px #3BC4B0;
+    background-color: white;
+    padding: 1rem;
+    background: linear-gradient(90deg, #edf8f6, white);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+div.datos1 {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-top: 2rem ;
+    padding-left: 4rem;
+    font-size: 25px;
+    line-height: 30px;
+    color: rgb(56, 52, 52);
+}
+
+div.datos1 strong {
+    text-transform: uppercase;
+    font-size: 18px;
+    padding-right: 0.3rem;
+    color: rgb(58, 57, 57);
+}
+
+div.datos2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 30px;
+    box-shadow: 10px 5px 10px rgba(204, 253, 247, 0.311);
+}
+
+.datos2 h4{
+    padding-top: 1rem;
+}
+
+.datos2 .table-direcciones strong{
+    color: rgb(58, 57, 57);
+    text-decoration: underline;
+}
+
+.datos2 .mis-direcciones{
+    display: flex;
+    flex-direction: row;
+}
+
+.datos2 .mis-direcciones strong{
+    color: rgb(56, 52, 52);
+}
+
+.btn-eliminar{
+    width: 3.3rem;
+    border-color: rgb(56, 52, 52);
+    background-color: white;
+    font-size: 12px;
+    border-radius: 4px;
+    transition: all 0.3s;
+} 
+.btn-eliminar:hover{
+    border-color: #0d6efd;
+    background-color: #0d6efd;
+    color: white;
+}
+
+.datos2 strong.id {
+    display: inline-block;
+    width: 2rem;
+}
+
+.datos2 strong.dir {
+    display: inline-block;
+    width: 5rem;
+}
+
+h3.h3-editar{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    padding-top: 3rem;
+}
+
+hr{
+    height: 2px;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.container-profile .row2{
+    display: flex;
+    flex-direction: row;
+}
+
+.row2 .formProfile{
+    text-align: center;
+    width: 420px;
+    padding: 2rem;
+}
+
+.row2 .formDirection{
+    width: 420px;
+    padding: 2rem;
+}
+
+
+
+.mb-3 .form-label {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+    color: black;
+}
+
+input.form-control,
+select.form-select {
+    border: none;
+    border-radius: 1rem;
+    height: 2.5rem;
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 0.5rem;
+    background-color:rgb(217, 221, 243);
+}
+
+.error-message,
+.formDirection span{
+    display: flex;
+    color: red;
+    font-size: 14px;
+    justify-content: center;
+}
+
+div.btn-editar {
+    display: flex;
+    justify-content: center;
+}
+
+button.btn-outline-success {
+    margin: 1rem;
+    width: 50%;
+    height: 2rem;
+    border-color: #0d6efd;
+    background-color: white;
+    border-radius: 10px;
+    font-size: 17px;
+    transition: all 0.3s;
+}
+
+button.btn-outline-success:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+@media  (max-width: 950px){
+    
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-profile .row2{
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.datos1 {
+        font-size: 20px;
+    }
+    
+    div.datos1 strong {
+        font-size: 16px;
+    }
+    
+    div.datos2 {
+        font-size: 13px;
+    }
+
+    .datos2 strong.id {
+        width: 1rem;
+    }
+    
+    .datos2 strong.dir {
+        width: 4.5rem;
+    }
+
+    .row2 .formProfile{
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .row2 .formDirection{
+        padding: 2rem;
+    }
+}
